@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20 p-2">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {products.map((product) => (
           <div key={product.id} className="bg-slate-50 p-8 rounded-lg ">
             <img
@@ -36,15 +36,15 @@ function App() {
               className="w-64 h-64 object-contain m-auto"
             />
             <h2 className=" mt-2 text-lg text-gray-800">{product.title}</h2>
-            {/* <p>⭐⭐⭐⭐⭐ 156</p> */}
+
             <div className="flex items-center">
-              <Rating
+              <p className="text-sm">⭐⭐⭐⭐⭐({product.rating})</p>
+              {/* <Rating
                 readonly
-                initialRating={product.rating}
+                initialRating={2.5}
                 emptySymbol={<img src={ImgStar1} className="w-4 h-4" />}
                 fullSymbol={<img src={ImgStar2} className="w-4 h-4" />}
-              />
-              <p>255</p>
+              /> */}
             </div>
 
             <p className="mt-1 text-xs line-through text-gray-500">
